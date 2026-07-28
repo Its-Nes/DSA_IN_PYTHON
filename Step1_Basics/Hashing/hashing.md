@@ -84,16 +84,17 @@ Output:
 
 ## ⚡ Why hashing is powerful
     Operation	Time
-    Search	O(1)
-    Insert	O(1)
-    Delete	O(1)
+    Search	    O(1)
+    Insert	    O(1)
+    Delete	    O(1)
 
 Compare that with arrays:
 → O(n) 
 
-🚫 Common mistake beginners make
+### Common mistake beginners make:
 
 Using nested loops
+
     for i in arr:
         for j in arr:
 
@@ -101,4 +102,5 @@ Using nested loops
 👉 Instead → use hashing → O(n)
 
 💡 One-line summary:
-Hashing = store once, answer instantly.
+
+    Hashing = store once, answer instantly.
