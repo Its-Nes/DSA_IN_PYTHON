@@ -1,0 +1,75 @@
+# Hashing in python
+# Its basically prestoring the values into some datastructure
+# like list/dictionary/set and then fetching it
+
+"""
+Problem:
+Given two arrays n and m, print the frequency of every element of m in n.
+
+Constraints:
+1 <= n[i] <= 10
+"""
+
+# ==========================================================
+# Brute Force -- Nested Loops
+# T.C: O(N*M)
+# S.C: O(1)
+# ==========================================================
+
+def brute(n, m):        # Will result in TLE in worst case as 10^8 * 10^8 =10^16
+    for num in m:
+        c = 0
+        for x in n:
+            if x == num:
+                c += 1
+        print(c, end=" ")
+
+
+# ==========================================================
+# Better Solution (Hash Array / Hash List)
+# T.C: O(N+M)
+# S.C: O(11) = O(1)
+# ==========================================================
+
+def better(n, m):
+    hash_list = [0] * 11        # As 1<=n[i]<=10, since python lists are 0-indexed to access idx 10 the list must have 11 elements, so from 0-11 (11th excluded)
+
+    for x in n:                 # 0 1 2 3 4 5 6 7 8 9 10
+        hash_list[x] += 1       # ------------------------
+                                # 0 0 0 0 0 0 0 0 0 0  0
+    for num in m:
+        if 1 <= num <= 10:
+            print(hash_list[num],end=" ")       
+        else:
+            print(0, end=" ")
+
+
+# ==========================================================
+# Optimal Solution (Dictionary Hashing)
+# T.C: O(N+M)
+# S.C: O(k)     k = no. of unique elements
+# ==========================================================
+
+def optimal(n, m):
+    freq = {}
+
+    for x in n:
+        freq[x] = freq.get(x, 0) + 1
+
+    for num in m:
+        print(freq.get(num, 0), end=" ")
+
+
+# ==========================================================
+# Driver Code
+# ==========================================================
+
+n = [5, 3, 2, 2, 1, 5, 5, 7, 5, 10]
+m = [10, 111, 1, 9, 5, 67, 2]
+
+# print("Optimal:")
+# optimal(n, m)
+
+#brute(n,m)
+better(n,m)
+
