@@ -4,7 +4,7 @@ Given an array of integers nums, count the frequency
 of each element and store the result in a dictionary.
 """
 
-nums=list(map(int,input().split()))
+nums=list(map(int,input("Enter elements of the array: ").split()))
 
 freq={}
 for i in nums:                  # O(N)     
@@ -28,7 +28,7 @@ print(freq)
 def storefreq(nums):
     freq={}
     for num in nums:             #->O(N)
-        if nums[num] in freq:    #->O(1)
+        if num in freq:    #->O(1)
             freq[num]+=1         #->O(1)
         else:
             freq[num]=1          #->O(1)
