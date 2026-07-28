@@ -14,6 +14,7 @@ print(freq)
 # t.c: O(n)
 # s.c: O(k)   k=no. of unique elements
 
+#---------------------------------------
 # For dictionaries we always consider avg case, 
 # Accessing, updating, deleting, adding element all take O(1) time (in avg case)
 
@@ -22,6 +23,7 @@ print(freq)
 # Therefore, we consider them O(1) on average.
 
 #---------------------------------------
+
 # Another way
 def storefreq(nums):
     freq={}
