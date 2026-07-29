@@ -1,9 +1,18 @@
 # Pattern 2 - Right-Angled Triangle
-
 """
 Problem:
 Given an integer n, print a right-angled triangle
 consisting of '*' characters.
+
+Example:
+Input:
+n = 4
+
+Output:
+*
+* *
+* * *
+* * * *
 """
 
 def triangle(n):

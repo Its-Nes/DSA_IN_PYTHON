@@ -3,6 +3,16 @@
 Problem:
 Given an integer n, print a right-aligned triangle
 consisting of '*' characters.
+
+Example:
+Input:
+n = 4
+
+Output:
+      *
+    * *
+  * * *
+* * * *
 """
 
 def right_aligned_triangle(n):
@@ -10,6 +20,7 @@ def right_aligned_triangle(n):
         print("  " * (n - i) + "* " * i)
 
     print()     # Blank line after each test case
+
 
 # Driver code
 t = int(input("No. of testcases: "))        # 2
